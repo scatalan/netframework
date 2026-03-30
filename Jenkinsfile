@@ -5,7 +5,7 @@ pipeline {
         MSBUILD  = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\MSBuild.exe"
         VSTEST   = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\Extensions\\TestPlatform\\vstest.console.exe"
         MSDEPLOY = "C:\\Program Files\\IIS\\Microsoft Web Deploy V3\\msdeploy.exe"
-        PUBLISH_DIR = "${WORKSPACE}\\publish"
+        PUBLISH_DIR = "${WORKSPACE}\\bin\\app.publish"
         IIS_SITE = "TestJenkins"
     }
 
