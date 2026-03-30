@@ -16,7 +16,7 @@ namespace UnitTestProject
             int resultado = calculator.Sumar(2, 3);
 
             // Assert
-            Assert.AreEqual(5, resultado);
+            Assert.AreEqual(7, resultado);
         }
 
         [TestMethod]
