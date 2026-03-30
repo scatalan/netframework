@@ -64,6 +64,25 @@ pipeline {
                 """
             }
         }
+		
+		
+		stage('Deploy Docker IIS (test)') {
+			steps {
+				bat """
+				REM Stop and remove container if exists
+				docker stop testjenkins_web 2>nul
+				docker rm testjenkins_web 2>nul
+
+				REM Run IIS container with published site
+				docker run -d ^
+				  --name testjenkins_web ^
+				  -p 8085:80 ^
+				  -v "${PUBLISH_DIR}:C:\\inetpub\\wwwroot" ^
+				  poc_contenedor:1.0
+				"""
+			}
+		}
+
     }
 
     post {
