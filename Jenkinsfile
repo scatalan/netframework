@@ -77,7 +77,7 @@ pipeline {
 				docker run -d ^
 				  --name testjenkins_web ^
 				  -p 8085:80 ^
-				  -v "${PUBLISH_DIR}:C:\\archivos" ^
+				  -v "${PUBLISH_DIR}:C:\\inetpub\\wwwroot" ^
 				  poc_contenedor:1.0
 				"""
 			}
